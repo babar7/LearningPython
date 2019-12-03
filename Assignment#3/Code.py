@@ -17,7 +17,7 @@ elif operator == '*':
 elif operator == '/':
     result = firstNumber / secondNumber
 elif operator == '^':
-    result = firstNumber ^ secondNumber
+    result = firstNumber ** secondNumber
 else:
     result = "Invalid operator, Please choose the operator from one of these, +, - , * , /, ^:"
 
@@ -35,14 +35,13 @@ def calculator(operator):
         "-": firstNumber - secondNumber,
         "*": firstNumber * secondNumber,
         "/": firstNumber / secondNumber,
-        "^": firstNumber ^ secondNumber,
+        "^": firstNumber ** secondNumber,
 
     }
     return switcher.get(operator, "Invalid operator, Please choose the operator from one of these, +, - , * , /, ^ ")
 
 
-print(str(firstNumber) + str(operator) +
-      str(secondNumber) + " = ", calculator(operator), "Using switch case")
+print(f'{firstNumber} {operator} {secondNumber} = {result} Using switch case')
 
 # ----------------------------------END-------------------------------------------------
 
@@ -108,6 +107,7 @@ userRecord = {
     'name': 'John',
     'age': 21,
     'address': '123 Fake Street',
+    'contact': '+012-458-657'
 }
 
 userKey = input("Please inter a key to get value: ")
